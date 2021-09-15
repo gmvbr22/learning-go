@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "github.com/gmvbr/learning-go/grpc/service/gen;gen";
+
+package gen;
+
+service MainService {
+
+  rpc Send (UserRequest) returns (UserReply) {}
+  
+}
+
+message UserRequest {
+  string name = 1;
+}
+
+message UserReply {
+  string message = 1;
+}
